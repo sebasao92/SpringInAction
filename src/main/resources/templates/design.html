@@ -9,7 +9,7 @@
 <h1>Design you taco!</h1>
 <img th:src="@{/images/TacoCloud.jpg}"/>
 
-<form method="POST" th:object="${design}}">
+<form method="POST" th:object="${design}">
     <div clas="grid">
         <div class="ingredient-group" id="wraps">
             <h3>Designate your wrap:</h3>
@@ -30,7 +30,7 @@
         <div class="ingredient-group" id="cheeses">
             <h3>Choose your cheese:</h3>
             <div th:each="ingredient : ${cheese}">
-                <input name="ingredients" type="checkbox" th:value="${ingredient.id}}"/>
+                <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
                 <span th:text="${ingredient.name}">INGREDIENT</span><br/>
             </div>
         </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div>
-        <h3>Name yout taco creation:</h3>
+        <h3>Name your taco creation:</h3>
         <input type="text" th:field="*{name}"/>
         <br/>
 
